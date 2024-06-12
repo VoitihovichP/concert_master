@@ -1,9 +1,5 @@
-<script setup lang="ts">
-import { ModuleOne } from 'Modules/ModuleOne'
-</script>
+<script setup lang="ts"></script>
 
 <template>
-  <main>
-    <ModuleOne />
-  </main>
+  <main></main>
 </template>

@@ -13,7 +13,10 @@ export default defineConfig({
       Configs: fileURLToPath(new URL('./src/configs', import.meta.url)),
       Components: fileURLToPath(new URL('./src/components', import.meta.url)),
       Modules: fileURLToPath(new URL('./src/modules', import.meta.url)),
-      Pages: fileURLToPath(new URL('./src/pages', import.meta.url))
+      Pages: fileURLToPath(new URL('./src/pages', import.meta.url)),
+      Ui: fileURLToPath(new URL('./src/ui', import.meta.url)),
+      Styles: fileURLToPath(new URL('./src/configs/styles', import.meta.url)),
+      Models: fileURLToPath(new URL('./src/models', import.meta.url))
     }
   }
 })

@@ -13,6 +13,9 @@
       "Components/*": ["./src/components/*"],
       "Modules/*": ["./src/modules/*"],
       "Pages/*": ["./src/pages/*"],
+      "Ui/*": ["./src/ui/*"],
+      "Styles/*": ["./src/configs/styles/*"],
+      "Models/*": ["./src/models/*"]
     }
   }
 }
