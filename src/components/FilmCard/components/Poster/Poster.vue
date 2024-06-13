@@ -9,7 +9,7 @@ const { posterSrc } = defineProps<PosterModel>()
 <template>
   <img
     :src="posterSrc"
-    onerror="this.src='public/empty-image.png'"
+    onerror="this.src='empty-image.png'"
     alt="Film Poster"
     loading="lazy"
     class="poster"
