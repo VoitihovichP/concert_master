@@ -16,7 +16,7 @@ const currentPage = ref<number>(1)
 const searchValue = computed(() => store.searchValue || '')
 
 const queryParams = computed(() => ({
-  s: store.searchValue,
+  s: store.searchValue.trim(),
   page: currentPage.value.toString()
 }))
 
@@ -65,6 +65,7 @@ provide('currentPage', currentPage)
     <Loader v-if="isFetching" />
     <FindMoviesList
       v-if="!isFetching && movies.length > 0 && data"
+      :userRequest="searchValue"
       :movies="movies"
       :totalObjects="'totalResults' in data ? Number(data.totalResults) : undefined"
       :itemsPerPage="ITEMS_PER_PAGE"

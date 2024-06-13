@@ -4,9 +4,11 @@ import { defineProps } from 'vue'
 import type { GetMoviesSearchItemModel } from '../../models/GetMovies.model'
 import { FilmCard } from 'Components/FilmCard'
 import { Pagination } from 'Components/Pagination'
+import SearchResult from '../SearchResult/SearchResult.vue'
 
-const { movies, totalObjects, itemsPerPage } = defineProps<{
+const { movies, totalObjects, itemsPerPage, userRequest } = defineProps<{
   movies: GetMoviesSearchItemModel[]
+  userRequest: string
   itemsPerPage: number
   totalObjects?: number
 }>()
@@ -14,6 +16,7 @@ const { movies, totalObjects, itemsPerPage } = defineProps<{
 
 <template>
   <div class="findMoviesList">
+    <SearchResult v-if="totalObjects" :resultsCount="totalObjects" :userRequest="userRequest" />
     <div class="findMoviesList__wrapper">
       <FilmCard
         v-for="movie in movies"
