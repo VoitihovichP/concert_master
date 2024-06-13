@@ -7,7 +7,13 @@ const { posterSrc } = defineProps<PosterModel>()
 </script>
 
 <template>
-  <img :src="posterSrc" alt="Film Poster" loading="lazy" class="poster" />
+  <img
+    :src="posterSrc"
+    onerror="this.src='public/empty-image.png'"
+    alt="Film Poster"
+    loading="lazy"
+    class="poster"
+  />
 </template>
 
 <style lang="scss" scoped>

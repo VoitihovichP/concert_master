@@ -6,6 +6,11 @@
   font-family: sans-serif;
 }
 
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
 .container {
   margin: 0 auto;
   width: calc(100vw - 80px);
