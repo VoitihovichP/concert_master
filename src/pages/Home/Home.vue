@@ -14,7 +14,7 @@ import { MoviesList } from 'Modules/MoviesList'
 @use 'Styles/vars' as *;
 
 .home {
-  padding: 24px;
+  padding: 24px 0;
   min-height: calc(100dvh - $layout-header-height);
 }
 </style>

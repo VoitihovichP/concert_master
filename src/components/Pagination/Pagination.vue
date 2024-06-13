@@ -123,6 +123,11 @@ const goToPage = (page: number | string) => {
     cursor: pointer;
     transition: 0.3s all;
 
+    @media (max-width: 575px) {
+      padding: 1px;
+      margin-left: 3px;
+    }
+
     &:disabled {
       pointer-events: none;
     }

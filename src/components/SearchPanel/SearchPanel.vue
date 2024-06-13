@@ -13,5 +13,19 @@ const store = inject<StoreModel>('store', { searchValue: '' })
 <style lang="scss" scoped>
 .search-input {
   width: 55%;
+  @media (max-width: 1199px) {
+    width: 50%;
+  }
+  @media (max-width: 991px) {
+    width: 45%;
+  }
+
+  @media (max-width: 767px) {
+    width: 40%;
+  }
+
+  @media (max-width: 575px) {
+    width: 100%;
+  }
 }
 </style>

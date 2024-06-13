@@ -14,4 +14,7 @@ html, body {
 .container {
   margin: 0 auto;
   width: calc(100vw - 80px);
+  @media (max-width: 575px) {
+    width: calc(100vw - 10px)
+  }
 }

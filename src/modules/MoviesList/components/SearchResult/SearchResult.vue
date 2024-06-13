@@ -16,6 +16,9 @@ const { userRequest, resultsCount } = defineProps<{ userRequest: string; results
   p {
     font-weight: 600;
     font-size: 32px;
+    @media (max-width: 575px) {
+      font-size: 24px;
+    }
   }
 }
 </style>

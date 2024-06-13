@@ -24,5 +24,8 @@ const { username } = defineProps<UserProfileModel>()
   background: none;
   border: none;
   cursor: pointer;
+  @media (max-width: 767px) {
+    gap: 6px;
+  }
 }
 </style>

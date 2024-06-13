@@ -21,6 +21,10 @@ const { username } = defineProps<UserProfileModel>()
   gap: 6px;
   &__name {
     font-weight: 600;
+    font-size: 12px;
+    @media (max-width: 767px) {
+      font-weight: 500;
+    }
   }
 }
 </style>

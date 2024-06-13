@@ -44,6 +44,9 @@ const { movies, totalObjects, itemsPerPage, userRequest } = defineProps<{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax($layout-card-width, 1fr));
     gap: 20px;
+    .filmCard {
+      justify-self: center;
+    }
   }
 }
 </style>

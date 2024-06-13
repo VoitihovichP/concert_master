@@ -17,5 +17,11 @@ const { text } = defineProps<AppLogoModel>()
   text-decoration: none;
   font-weight: 800;
   font-size: 28px;
+  @media (max-width: 991px) {
+    font-size: 22px;
+  }
+  @media (max-width: 767px) {
+    font-size: 18px;
+  }
 }
 </style>
