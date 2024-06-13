@@ -16,6 +16,8 @@ import { UserProfile } from 'Components/UserProfile'
 @use 'Styles/vars' as *;
 
 .header {
+  position: sticky;
+  top: 0;
   padding: 10px 40px;
   display: flex;
   align-items: center;

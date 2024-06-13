@@ -1,12 +1,13 @@
 <script setup lang="ts">
 import { Input } from '@/ui/Input'
-import { ref } from 'vue'
+import { inject } from 'vue'
+import type { StoreModel } from 'Models/Store.model'
 
-const searchValue = ref<string>('')
+const store = inject<StoreModel>('store', { searchValue: '' })
 </script>
 
 <template>
-  <Input placeholder="Search..." v-model="searchValue" class="search-input" />
+  <Input placeholder="Search..." v-model="store.searchValue" class="search-input" />
 </template>
 
 <style lang="scss" scoped>

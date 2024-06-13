@@ -1,5 +1,11 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { MoviesList } from 'Modules/MoviesList'
+</script>
 
 <template>
-  <main></main>
+  <main>
+    <div class="container">
+      <MoviesList />
+    </div>
+  </main>
 </template>

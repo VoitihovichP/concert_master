@@ -13,5 +13,6 @@ const { posterSrc } = defineProps<PosterModel>()
 <style lang="scss" scoped>
 .poster {
   width: 150px;
+  height: 200px;
 }
 </style>

@@ -1,17 +1,18 @@
 <script setup lang="ts">
 import Poster from './components/Poster/Poster.vue'
+import type { FilmCardModel } from './models/FilmCard.model'
+
+const { poster, name, type, year, id } = defineProps<FilmCardModel>()
 </script>
 
 <template>
   <div class="filmCard">
-    <Poster
-      posterSrc="https://m.media-amazon.com/images/M/MV5BZmVkNDc3YjQtZDMzOS00MTNjLTljNzUtZDhjYWQxMmVlNjE5XkEyXkFqcGdeQXVyNTgyNTA4MjM@._V1_SX300.jpg"
-    />
+    <Poster :posterSrc="poster" />
     <div class="filmCard__description">
-      <p>Name: asdasd</p>
-      <p>Year: 2001</p>
-      <p>ID: qweq</p>
-      <p>Type: Horror</p>
+      <p>Name: {{ name }}</p>
+      <p>Year: {{ year }}</p>
+      <p>imdbID: {{ id }}</p>
+      <p>Type: {{ type }}</p>
     </div>
   </div>
 </template>
@@ -20,7 +21,9 @@ import Poster from './components/Poster/Poster.vue'
 @use 'Styles/vars' as *;
 
 .filmCard {
+  //flex: 0 0 auto;
   width: fit-content;
+  max-width: $layout-card-width;
   &__description {
     display: flex;
     flex-direction: column;
