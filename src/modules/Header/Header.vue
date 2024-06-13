@@ -23,6 +23,7 @@ import { UserProfile } from 'Components/UserProfile'
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  height: $layout-header-height;
   background-color: $base-header-color;
 }
 </style>
