@@ -1,39 +1,30 @@
-# test-task
+## Ссылка на демо
+[Concert Master Test Task](https://concert-test-task.netlify.app/)
 
-This template should help get you started developing with Vue 3 in Vite.
+## Время, затраченное на выполнение
+На выполнение проекта было затрачено 5 часов 47 минут.
 
-## Recommended IDE Setup
+## Описание проекта
+Этот проект был создан в рамках тестового задания для компании КонцертМастер и демонстрирует использование различных технологий фронтенд разработки. Он представляет собой приложение на Vue 3, разработанное с использованием Vite для быстрой сборки, Vue Query для работы с данными, Sass для стилей и TypeScript для обеспечения типизации.
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## Использованные технологии
+- Vue 3
+- Vite
+- Vue Query
+- Sass
+- TypeScript
+- Eslint
+- Prettier
 
-## Type Support for `.vue` Imports in TS
+## Дополнительные функции
+1. **Адаптивность**: Приложение адаптируется под различные размеры экранов.
+2. **Сообщение об отсутствии результатов**: Отображает сообщение, если нет данных по поиску.
+3. **Индикатор загрузки**: Включает спиннер загрузки для отображения процесса получения данных.
+4. **Заполнитель для отсутствующих изображений**: Предоставляет заполнитель для изображений, которые не удалось загрузить.
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Type-Check, Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+## Как запустить локально
+1. Склонируйте репозиторий: `git clone https://github.com/VoitihovichP/concert_master.git`
+2. Перейдите в директорию проекта: `cd concert_master`
+3. Установите зависимости: `npm install`
+4. Запустите сервер разработки: `npm run dev`
+5. Откройте браузер и перейдите по адресу `http://localhost:5173`
