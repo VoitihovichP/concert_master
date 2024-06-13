@@ -15,7 +15,8 @@
       "Pages/*": ["./src/pages/*"],
       "Ui/*": ["./src/ui/*"],
       "Styles/*": ["./src/configs/styles/*"],
-      "Models/*": ["./src/models/*"]
+      "Models/*": ["./src/models/*"],
+      "Helpers/*": ["./src/helpers/*"],
     }
   }
 }

@@ -1,10 +1,11 @@
 <script setup lang="ts">
 import { useQuery } from '@tanstack/vue-query'
 import { getMovies } from './api/getMovies'
-import { computed, inject, watch } from 'vue'
+import { computed, inject, onBeforeUnmount, watch } from 'vue'
 import { FilmCard } from 'Components/FilmCard'
 import type { StoreModel } from 'Models/Store.model'
 import type { GetMoviesSearchItemModel } from 'Modules/MoviesList/models/GetMovies.model'
+import { debounce } from 'Helpers/debounce'
 
 const store = inject<StoreModel>('store', { searchValue: '' })
 
@@ -18,9 +19,9 @@ const { data, refetch } = useQuery({
   queryFn: () => getMovies(queryParams.value)
 })
 
-watch(queryParams, () => {
+const debouncedRefetch = debounce(() => {
   refetch()
-})
+}, 400)
 
 const movies = computed<GetMoviesSearchItemModel[]>(() => {
   if (!data.value) return []
@@ -32,6 +33,14 @@ const movies = computed<GetMoviesSearchItemModel[]>(() => {
   } else {
     return [data.value as GetMoviesSearchItemModel]
   }
+})
+
+watch(queryParams, () => {
+  debouncedRefetch()
+})
+
+onBeforeUnmount(() => {
+  clearTimeout(debouncedRefetch)
 })
 </script>
 

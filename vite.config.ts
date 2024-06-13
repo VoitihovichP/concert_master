@@ -16,7 +16,8 @@ export default defineConfig({
       Pages: fileURLToPath(new URL('./src/pages', import.meta.url)),
       Ui: fileURLToPath(new URL('./src/ui', import.meta.url)),
       Styles: fileURLToPath(new URL('./src/configs/styles', import.meta.url)),
-      Models: fileURLToPath(new URL('./src/models', import.meta.url))
+      Models: fileURLToPath(new URL('./src/models', import.meta.url)),
+      Helpers: fileURLToPath(new URL('./src/helpers', import.meta.url))
     }
   }
 })
