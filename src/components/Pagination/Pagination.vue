@@ -123,6 +123,10 @@ const goToPage = (page: number | string) => {
     cursor: pointer;
     transition: 0.3s all;
 
+    &:disabled {
+      pointer-events: none;
+    }
+
     @media (hover: hover) {
       &:hover {
         color: $light-font-color;
